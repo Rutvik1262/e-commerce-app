@@ -1,0 +1,112 @@
+<div class="jambotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h3> Registration form</h3>
+                <form action="">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" formControlName="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Mobile Number</label>
+                        <input type="text" class="form-control" formControlName="mobileNumber">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Enter your age</label>
+                        <input type="text" class="form-control" formControlName="age">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Enter your DOB</label>
+                        <input type="text" class="form-control" formControlName="dob">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" placeholder="rutvik@gmail.com"
+                                formControlName="email">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" placeholder="password"
+                                formControlName="password">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="address">Address 1</label>
+                            <input type="text" class="form-control" placeholder="suwanee, ga" formControlName="addline1">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="address">Address 2</label>
+                            <input type="text" class="form-control" placeholder="apartment, floor"
+                                formControlName="addline2">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" placeholder="City" formControlName="city">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="state">State</label>
+                            <select id="inputstate" class="form-control" formControlName="state">
+                                <option selected>choose..</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="zip">Zip code</label>
+                            <input type="text" class="form-control" placeholder="City" formControlName="zipcode">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="language">Language</label>
+                        <select multiple class="form-control" formControlName="language">
+                            <option>Hindi</option>
+                            <option>English</option>
+                            <option>Gujrati</option>
+                            <option>Tamil</option>
+                            <option>Others</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-inline" formcontrolName="gender" value="Male">
+                            <label for="male" class="form-check-inline">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-inline" formcontrolName="gender" value="Female">
+                            <label for="female" class="form-check-inline">Female</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-inline" formcontrolName="gender" value="Others" disabled>
+                            <label for="others" class="form-check-inline">Others</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="somethingAboutYou">Something About You</label>
+                        <textarea class="form-control" rows="3" formControlName="aboutyou"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="uploadphoto">Upload Your Photo</label>
+                        <input type="file" class="form-control" formControlName="uploadphoto">
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" class="form-check-inline" formControlName="agreetc">
+                        <label for="agreetc" class="form-check-inline" >Terms and Condotions</label>
+                    </div>
+                    <div class="from-group">
+                        <label for="role">what Do you Want?</label>
+                        <select class="form-control" formControlName="role">
+                            <option value="seller">Seller</option>
+                            <option value="buyer">Buyer</option>
+                        </select>
+                    </div> &nbsp;
+                    <div class="form-group">
+                        <button class="btn btn-primary">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

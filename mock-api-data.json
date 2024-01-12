@@ -1,0 +1,102 @@
+{
+    "user": [
+        {
+            "name": "Rutvik",
+            "mobNumber": "1234567890",
+            "age": "23",
+            "dob": "06-12-2000",
+            "email": "rutvik@gmail.com",
+            "Password":"123456",
+            "address": {
+                "address1": "cavendish pl",
+                "address2": "suwanee",
+                "city": "atlanta",
+                "state": "georgia",
+                "zipcode": "30024"
+            },
+            "language":[
+                "english",
+                "hindi",
+                "gujrati"
+            ],
+            "gender": "male",
+            "about": "programmer",
+            "uploadphoto": "rutvik.png",
+            "agreetc": "true",
+            "role": "admin",
+            "id":1
+        }
+    ],
+    "products":[
+        {
+            "id": 1,
+            "name": "door",
+            "uploadphoto":"https://images.app.goo.gl/edZZ6rSyn8hCKdvi6",
+            "proctDesc": "door open and close",
+            "mrp":"1000",
+            "dp":"699",
+            "status":"active"
+        },
+        {
+            "id": 2,
+            "name": "window",
+            "uploadphoto":"https://images.app.goo.gl/edZZ6rSyn8hCKdvi6",
+            "proctDesc": "door open and close",
+            "mrp":"1000",
+            "dp":"699",
+            "status":"active"
+        },
+        {
+            "id": 3,
+            "name": "glass",
+            "uploadphoto":"https://images.app.goo.gl/edZZ6rSyn8hCKdvi6",
+            "proctDesc": "door open and close",
+            "mrp":"1000",
+            "dp":"699",
+            "status":"active"
+        },
+        {
+            "id": 4,
+            "name": "chair",
+            "uploadphoto":"https://images.app.goo.gl/edZZ6rSyn8hCKdvi6",
+            "proctDesc": "door open and close",
+            "mrp":"1000",
+            "dp":"699",
+            "status":"active"
+        },
+        {
+            "id": 5,
+            "name": "furniture",
+            "uploadphoto":"https://images.app.goo.gl/edZZ6rSyn8hCKdvi6",
+            "proctDesc": "door open and close",
+            "mrp":"1000",
+            "dp":"699",
+            "status":"active"
+        }
+    ],
+    "orders":[
+        {
+            "id": "1",
+            "userId": 3,
+            "sellerId":2,
+            "product":{
+            "id": 1,
+            "name": "door",
+            "uploadphoto":"https://images.app.goo.gl/edZZ6rSyn8hCKdvi6",
+            "proctDesc": "door open and close",
+            "mrp":"1000",
+            "dp":"699",
+            "status":"active"
+            },
+            "deliveryAddress": {
+                "id":0,
+                "address1": "cavendish pl",
+                "address2": "suwanee",
+                "city": "atlanta",
+                "state": "georgia",
+                "zipcode": "30024"
+            },
+            "contact": "1234567890",
+            "dateTime": "05/12/2020"
+        }
+    ]}
