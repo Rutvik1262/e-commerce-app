@@ -23,4 +23,8 @@ authRegister(user_dto:any, password:any):Observable<any>{
 adminLogin(user_name:any, password:any):Observable<any>{
   return this.apiService.get(this.login_url+'/user?email='+user_name+'&password='+password+'&role=admin');
 }
+
+userRegister(user_dto:any):Observable<any>{
+  return this.apiService.post(this.reg_url+'/user', user_dto)
+}
 }
