@@ -1,9 +1,111 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
+import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuardService {
+export class AdminAuthGuardLogin implements CanActivate{
+constructor(@Inject(Router) private router: Router) {}
+  canActivate(route: ActivatedRouteSnapshot, state:RouterStateSnapshot){
+  let role = sessionStorage.getItem("role");
+  if(role =="admin"){
+  this.router.navigate(["/admin-dashboard"]);
+  return false;
+  }else{
+  return true;
+  }
+}
+}
 
-  constructor() { }
+//after login check
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AdminAuthGuardService implements CanActivate {
+  constructor(private router:Router) {}
+  canActivate(route: ActivatedRouteSnapshot, state:RouterStateSnapshot){
+  let role = sessionStorage.getItem("role");
+  if(role =="admin"){
+  return true;
+  }else{
+  this.router.navigate(['/admin-login']);
+  return false;
+  }
+}
+}
+
+// customer (buyer/seller) before login
+@Injectable({
+  providedIn: 'root'
+})
+// export class SellerBuyerAuthGuardLogin implements CanActivate {
+//     constructor(private router:Router) {}
+//     canActivate(route: ActivatedRouteSnapshot, state:RouterStateSnapshot){
+//     let role = sessionStorage.getItem("role");
+//     if(role =="seller"){
+//     this.router.navigate(["/seller-dashboard"]);
+//     return false;
+//     }else if (role =="buyer") {
+//       this.router.navigate(["/buyer-dashboard"]);
+//     return false;
+//     }else{
+//     return true;
+//     }
+export class SellerBuyerAuthGuardLogin implements CanActivate {
+  constructor(private router: Router) {}
+
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+    if (typeof sessionStorage !== 'undefined') {
+      let role = sessionStorage.getItem("role");
+      if (role === "seller") {
+        this.router.navigate(["/seller-dashboard"]);
+        return false;
+      } else if (role === "buyer") {
+        this.router.navigate(["/buyer-dashboard"]);
+        return false;
+      } else {
+        return true;
+      }
+    } else {
+      console.error("sessionStorage is not available in this environment.");
+      return false;
+    }
+  }
+}
+//buyer after login check
+@Injectable({
+  providedIn: 'root'
+})
+export class BuyerAuthGuardService implements CanActivate {
+    constructor(private router:Router) {}
+    canActivate(route: ActivatedRouteSnapshot, state:RouterStateSnapshot){
+    let role = sessionStorage.getItem("role");
+    if(role =="buyer"){
+    this.router.navigate(["/buyer-dashboard"]);
+    return true;
+    }else{
+      this.router.navigate(["/sign-in"]);
+    return false;
+    }
+  }
+}
+
+//seller after login check
+@Injectable({
+  providedIn: 'root'
+})
+export class SellerAuthGuardService implements CanActivate{
+  constructor(private router:Router) {}
+  canActivate(route: ActivatedRouteSnapshot, state:RouterStateSnapshot){
+  let role = sessionStorage.getItem("role");
+  if(role =="seller"){
+  this.router.navigate(["/seller-dashboard"]);
+  return true;
+  }else{
+    this.router.navigate(["/sign-in"]);
+  return false;
+  }
+}
 }

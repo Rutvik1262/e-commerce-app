@@ -37,7 +37,7 @@ export class SigninSignupComponent {
     }
     this.signUpform = this.formBuilder.group({
       name: ['', Validators.required],
-      mobNumber: ['', Validators.required],
+      mobileNumber: ['', Validators.required],
       age: ['', Validators.required],
       dob: ['', Validators.required],
       email: ['', Validators.required],
@@ -87,8 +87,30 @@ export class SigninSignupComponent {
       role: this.user_reg_data.role,
     }
     this.loginService.userRegister(this.user_dto).subscribe(data=>{
-      alert("user regiister Successfully");
+      alert("user register Successfully");
       this.router.navigateByUrl('/sign-in');
     })
   }
-}
+  onSubmitSignIn(){
+  this.loginService.authLogin(this.signInFormValue.userEmail, this.signInFormValue.userPassword).subscribe(data=>{
+  this.user_data = data;
+  if(this.user_data.length ==1){
+  if(this.user_data[0].role =="seller"){
+  sessionStorage.setItem("user_session_id", this.user_data[0].id);
+  sessionStorage.setItem("role", this.user_data[0].role);
+  this.router.navigateByUrl('/seller-dashboard');
+  }else if(this.user_data[0].role =='buyer'){
+   sessionStorage.setItem("user_session_id", this.user_data[0].id);
+    sessionStorage.setItem("role", this.user_data[0].role);
+    this.router.navigateByUrl('/buyer-dashboard');
+  }else{
+  alert("invalid login detail");
+  }
+  }else{
+  alert("invalid")
+  }
+  console.log(this.user_data)
+}, error=>{
+console.log("my error", error)
+})
+}}

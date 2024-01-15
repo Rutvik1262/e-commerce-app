@@ -1,7 +1,7 @@
 <div class="jambotron">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 offset-md-3">
+            <div class="col-md-6 offset-md-3" *ngIf="regForm">
                 <h3> Registration form</h3>
                 <form [formGroup]="signUpform">
                     <div class="form-group">
@@ -9,15 +9,15 @@
                         <input type="text" class="form-control" formControlName="name">
                     </div>
                     <div class="form-group">
-                        <label for="name">Mobile Number</label>
+                        <label for="mobileNumber">Mobile Number</label>
                         <input type="text" class="form-control" formControlName="mobileNumber">
                     </div>
                     <div class="form-group">
-                        <label for="name">Enter your age</label>
+                        <label for="age">Enter your age</label>
                         <input type="text" class="form-control" formControlName="age">
                     </div>
                     <div class="form-group">
-                        <label for="name">Enter your DOB</label>
+                        <label for="dob">Enter your DOB</label>
                         <input type="date" class="form-control" formControlName="dob">
                     </div>
                     <div class="form-row">
@@ -32,11 +32,11 @@
                                 formControlName="password">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="address">Address 1</label>
+                            <label for="addLine1">Address 1</label>
                             <input type="text" class="form-control" placeholder="suwanee, ga" formControlName="addline1">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="address">Address 2</label>
+                            <label for="addLine2">Address 2</label>
                             <input type="text" class="form-control" placeholder="apartment, floor"
                                 formControlName="addline2">
                         </div>
@@ -108,17 +108,22 @@
                 </form>
                 <p class="sim-pointer" routerLink="/sign-in">Already have an account</p>
             </div>
-         <div class=".col-md-6 offsset-md-3">
+         <div class="col-md-6 offset-md-3" *ngIf="!regForm">
             <h3>Login - Angular 17 Template drivenb from with validation</h3>
-            <form>
+            <form name=""form #tf="ngForm" (ngSubmit)="tf.form.valid && onSubmitSignIn()" novalidate>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" name="userEmail">
+                    <input type="email" class="form-control" name="userEmail"
+                  [(ngModel)]="signInFormValue.userEmail" #userEmail="ngModel" required email />
                 </div>
                 <div class="form-froup">
                     <label for="password">Password</label>
-                    <input type="password" class="form-control" name="userPassword">
+                    <input type="password" class="form-control" name="userPassword"
+                    [(ngModel)] ="signInFormValue.userPassword" #userPassword="ngModel" minlength="6" togglePassword>
                 </div>
+              <div class="form-group">
+                <button class="btn btn-primary">Login</button>
+              </div>
             </form>
             <p class="sim-pointer" routerLink="/sign-up">Don't have an account Click here to login</p>
          </div>

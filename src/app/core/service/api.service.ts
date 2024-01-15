@@ -6,12 +6,21 @@ import { Observable, catchError, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
- httpOptions ={
+ /* using this was getting this error application generation failed
+  The last overload gave the following error.
+  Type '{ header: HttpHeaders; }' has no properties in common with type '{ headers?: HttpHeaders | { [header: string]: string | string[]; } | undefined; context?: HttpContext | undefi
+ ned; observe?: "body" | undefined; params?: HttpParams | { ...; } | undefined; reportProgress?: boolean | undefined; responseType?: "json" | undefined; withCredentials?: boolean | undef ined; transferCache?: ...'. [plugin angular-compiler]
+  httpOptions ={
   header : new HttpHeaders({
     "content-type": "application/json",
     "Access-Control-Allow-Origin" : "*"
   })
- }
+ }*/
+
+ httpOptions = { headers: new HttpHeaders()
+ .set('Content-Type', 'application/json')
+ .set('Access-Control-Allow-Origin', '*') };
+
   constructor(private http:HttpClient) { }
 
   private formatErrors(error: any){
@@ -25,7 +34,7 @@ export class ApiService {
     (this.formatErrors))
   }
   post(path:string, body:object ={}): Observable<any>{
-    return this.http.post(path,JSON.stringify(body), this.httpOptions).pipe(catchError
+    return this.http.post(path, JSON.stringify(body), this.httpOptions).pipe(catchError
     (this.formatErrors))
   }
   delete(path:string): Observable<any>{
