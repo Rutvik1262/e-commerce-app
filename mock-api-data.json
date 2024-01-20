@@ -1,37 +1,37 @@
 {
     "user": [
-        {
-            "name": "Rutvik",
-            "mobNumber": "1234567890",
-            "age": "23",
-            "dob": "06-12-2000",
-            "email": "rutvik@gmail.com",
-            "Password":"123456",
-            "address": {
-                "address1": "cavendish pl",
-                "address2": "suwanee",
-                "city": "atlanta",
-                "state": "georgia",
-                "zipcode": "30024"
-            },
-            "language":[
-                "english",
-                "hindi",
-                "gujrati"
-            ],
-            "gender": "male",
-            "about": "programmer",
-            "uploadphoto": "rutvik.png",
-            "agreetc": "true",
-            "role": "admin",
-            "id":1
-        },
       {
         "aboutYou": "adasdadasdad",
         "age": "21",
         "agreetc": "true",
         "dob": "06-12-2000",
         "email": "rutvik@gmail.com",
+        "gender":"Male",
+        "address": {
+          "id": 0,
+          "address1": "cavendish pl",
+          "address2": "suwanee",
+          "city": "atlanta",
+          "state": "georgia",
+          "zipcode": "30024"
+        },
+        "language":[
+          "english",
+          "hindi",
+          "gujrati"
+        ],
+        "mobNumber": "9876543210",
+        "name": "Rutvik",
+        "password":"123456789",
+        "uploadphoto": "rutvik.png",
+        "role": "admin"
+      },
+      {
+        "aboutYou": "adasdadasdad",
+        "age": "21",
+        "agreetc": "true",
+        "dob": "06-12-2000",
+        "email": "rutvik12@gmail.com",
         "gender":"Male",
         "address": {
           "id": 0,

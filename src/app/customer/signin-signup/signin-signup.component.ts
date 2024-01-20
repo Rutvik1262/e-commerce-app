@@ -14,7 +14,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   templateUrl: './signin-signup.component.html',
   styleUrl: './signin-signup.component.css'
 })
-export class SigninSignupComponent {
+export class 
+SigninSignupComponent {
   regForm: boolean = false;
   signUpform!: FormGroup;
   signInform!: FormGroup;

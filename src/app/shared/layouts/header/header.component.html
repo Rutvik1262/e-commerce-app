@@ -12,20 +12,20 @@
           <li class="nav-item">
             <a class="nav-link" href="#">About Us</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="buyer-dashboard">Order B</a>
+          <li class="nav-item" *ngIf="user_role =='buyer'">
+            <a class="nav-link" routerLink="buyer-dashboard">Order </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/all-order">All Order A</a>
+          <li class="nav-item" *ngIf="user_role ==='admin'">
+            <a class="nav-link" routerLink="/all-order">All Order </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/seller/product">Product S</a>
+          <li class="nav-item"  *ngIf="user_role =='seller'">
+            <a class="nav-link" routerLink="/seller/product">Product</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/admin/product">All product A</a>
+          <li class="nav-item"  *ngIf="user_role =='admin'">
+            <a class="nav-link" routerLink="/admin/product">All product </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/admin/user">Users A</a>
+          <li class="nav-item"  *ngIf="user_role =='admin'">
+            <a class="nav-link" routerLink="/admin/user">Users </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="#">Contact us</a>
@@ -38,7 +38,7 @@
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto"  *ngIf="!logged_in" >
           <li class="nav-item">
             <a class="nav-link" routerLink="/sign-in">Sign in</a>
           </li>
@@ -46,12 +46,12 @@
             <a class="nav-link" routerLink="/sign-up">Sign up</a>
           </li>
         </ul>
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto" *ngIf="logged_in">
           <li class="nav-item">
             <a class="nav-link sim-pointer" routerLink="/my-profile">My Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link sim-pointer">Logout</a>
+            <a class="nav-link sim-pointer" (click)="logout()">Logout</a>
           </li>
         </ul>
       </div>
