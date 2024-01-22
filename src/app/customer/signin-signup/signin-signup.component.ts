@@ -14,11 +14,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   templateUrl: './signin-signup.component.html',
   styleUrl: './signin-signup.component.css'
 })
-export class 
+export class
 SigninSignupComponent {
   regForm: boolean = false;
-  signUpform!: FormGroup;
-  signInform!: FormGroup;
+  signUpForm!: FormGroup;
+  signInForm!: FormGroup;
   signUpsubmitted = false;
   href: string = '';
   user_data: any;
@@ -36,7 +36,7 @@ SigninSignupComponent {
     } else if (this.href == '/sign-in') {
       this.regForm = false;
     }
-    this.signUpform = this.formBuilder.group({
+    this.signUpForm = this.formBuilder.group({
       name: ['', Validators.required],
       mobileNumber: ['', Validators.required],
       age: ['', Validators.required],
@@ -49,6 +49,7 @@ SigninSignupComponent {
       state: ['', Validators.required],
       zipCode: ['', Validators.required],
       language: ['', Validators.required],
+      uploadphoto: ['',Validators.required],
       gender: ['', Validators.required],
       aboutYou: ['', Validators.required],
       agreetc: ['', Validators.required],
@@ -56,15 +57,22 @@ SigninSignupComponent {
     });
   }
   get rf() {
-    return this.signUpform.controls;
+    return this.signUpForm.controls;
   }
 
   onSubmitSignUp() {
     this.signUpsubmitted = true;
-    if (this.signUpform.invalid) {
+    if (this.signUpForm.invalid) {
+      const invalid = [];
+      const controls = this.signUpForm.controls;
+      for (const name in controls) {
+        if (controls[name].invalid) {
+          invalid.push(name);
+        }
+      }
       return;
     }
-    this.user_reg_data = this.signUpform.value;
+    this.user_reg_data = this.signUpForm.value;
     this.user_dto = {
       aboutYou: this.user_reg_data.aboutYou,
       age: this.user_reg_data.age,
@@ -78,7 +86,7 @@ SigninSignupComponent {
         addLine2: this.user_reg_data.addLine2,
         city: this.user_reg_data.city,
         state: this.user_reg_data.state,
-        Zipcode: this.user_reg_data.zipCode,
+        zipCode: this.user_reg_data.zipCode,
       },
       language: this.user_reg_data.language,
       mobNumber: this.user_reg_data.mobNumber,

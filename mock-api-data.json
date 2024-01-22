@@ -1,155 +1,278 @@
 {
-    "user": [
-      {
-        "aboutYou": "adasdadasdad",
-        "age": "21",
-        "agreetc": "true",
-        "dob": "06-12-2000",
-        "email": "rutvik@gmail.com",
-        "gender":"Male",
-        "address": {
-          "id": 0,
-          "address1": "cavendish pl",
-          "address2": "suwanee",
-          "city": "atlanta",
-          "state": "georgia",
-          "zipcode": "30024"
-        },
-        "language":[
-          "english",
-          "hindi",
-          "gujrati"
-        ],
-        "mobNumber": "9876543210",
-        "name": "Rutvik",
-        "password":"123456789",
-        "uploadphoto": "rutvik.png",
-        "role": "admin"
+  "user": [
+    {
+      "aboutYou": "adasdadasdad",
+      "age": "21",
+      "agreetc": "true",
+      "dob": "06-12-2000",
+      "email": "rutvik@gmail.com",
+      "gender": "Male",
+      "address": {
+        "id": 0,
+        "address1": "cavendish pl",
+        "address2": "suwanee",
+        "city": "atlanta",
+        "state": "georgia",
+        "zipcode": "30024"
       },
-      {
-        "aboutYou": "adasdadasdad",
-        "age": "21",
-        "agreetc": "true",
-        "dob": "06-12-2000",
-        "email": "rutvik12@gmail.com",
-        "gender":"Male",
-        "address": {
-          "id": 0,
-          "address1": "cavendish pl",
-          "address2": "suwanee",
-          "city": "atlanta",
-          "state": "georgia",
-          "zipcode": "30024"
-        },
-        "language":[
-          "english",
-          "hindi",
-          "gujrati"
-        ],
-        "mobNumber": "9876543210",
-        "name": "Rutvik",
-        "password":"123456789",
-        "uploadphoto": "rutvik.png",
-        "role": "seller"
+      "language": [
+        "english",
+        "hindi",
+        "gujrati"
+      ],
+      "mobNumber": "9876543210",
+      "name": "Rutvik",
+      "password": "123456789",
+      "uploadphoto": "rutvik.png",
+      "role": "admin",
+      "id": "2049"
+    },
+    {
+      "aboutYou": "adasdadasdad",
+      "age": "21",
+      "agreetc": "true",
+      "dob": "06-12-2000",
+      "email": "rutvik12@gmail.com",
+      "gender": "Male",
+      "address": {
+        "id": 0,
+        "address1": "cavendish pl",
+        "address2": "suwanee",
+        "city": "atlanta",
+        "state": "georgia",
+        "zipcode": "30024"
       },
-      {
-        "aboutYou": "adasdadasdad",
-        "age": "21",
-        "agreetc": "true",
-        "dob": "06-12-2000",
-        "email": "rutvik123@gmail.com",
-        "gender":"Male",
-        "address": {
-          "id": 0,
-          "address1": "cavendish pl",
-          "address2": "suwanee",
-          "city": "atlanta",
-          "state": "georgia",
-          "zipcode": "30024"
-        },
-        "language":[
-          "english",
-          "hindi",
-          "gujrati"
-        ],
-        "mobNumber": "9876543210",
-        "name": "Rutvik",
-        "password":"1234567890",
-        "uploadphoto": "rutvik.png",
-        "role": "buyer"
-      }
-
-    ],
-    "products":[
-        {
-            "id": 1,
-            "name": "door",
-            "uploadphoto":"https://images.app.goo.gl/edZZ6rSyn8hCKdvi6",
-            "proctDesc": "door open and close",
-            "mrp":"1000",
-            "dp":"699",
-            "status":"active"
-        },
-        {
-            "id": 2,
-            "name": "window",
-            "uploadphoto":"https://images.app.goo.gl/edZZ6rSyn8hCKdvi6",
-            "proctDesc": "door open and close",
-            "mrp":"1000",
-            "dp":"699",
-            "status":"active"
-        },
-        {
-            "id": 3,
-            "name": "glass",
-            "uploadphoto":"https://images.app.goo.gl/edZZ6rSyn8hCKdvi6",
-            "proctDesc": "door open and close",
-            "mrp":"1000",
-            "dp":"699",
-            "status":"active"
-        },
-        {
-            "id": 4,
-            "name": "chair",
-            "uploadphoto":"https://images.app.goo.gl/edZZ6rSyn8hCKdvi6",
-            "proctDesc": "door open and close",
-            "mrp":"1000",
-            "dp":"699",
-            "status":"active"
-        },
-        {
-            "id": 5,
-            "name": "furniture",
-            "uploadphoto":"https://images.app.goo.gl/edZZ6rSyn8hCKdvi6",
-            "proctDesc": "door open and close",
-            "mrp":"1000",
-            "dp":"699",
-            "status":"active"
-        }
-    ],
-    "orders":[
-        {
-            "id": "1",
-            "userId": 3,
-            "sellerId":2,
-            "product":{
-            "id": 1,
-            "name": "door",
-            "uploadphoto":"https://images.app.goo.gl/edZZ6rSyn8hCKdvi6",
-            "proctDesc": "door open and close",
-            "mrp":"1000",
-            "dp":"699",
-            "status":"active"
-            },
-            "deliveryAddress": {
-                "id":0,
-                "address1": "cavendish pl",
-                "address2": "suwanee",
-                "city": "atlanta",
-                "state": "georgia",
-                "zipcode": "30024"
-            },
-            "contact": "1234567890",
-            "dateTime": "05/12/2020"
-        }
-    ]}
+      "language": [
+        "english",
+        "hindi",
+        "gujrati"
+      ],
+      "mobNumber": "9876543210",
+      "name": "Rutvik",
+      "password": "123456789",
+      "uploadphoto": "rutvik.png",
+      "role": "seller",
+      "id": "6797"
+    },
+    {
+      "aboutYou": "adasdadasdad",
+      "age": "21",
+      "agreetc": "true",
+      "dob": "06-12-2000",
+      "email": "rutvik123@gmail.com",
+      "gender": "Male",
+      "address": {
+        "id": 0,
+        "address1": "cavendish pl",
+        "address2": "suwanee",
+        "city": "atlanta",
+        "state": "georgia",
+        "zipcode": "30024"
+      },
+      "language": [
+        "english",
+        "hindi",
+        "gujrati"
+      ],
+      "mobNumber": "9876543210",
+      "name": "Rutvik",
+      "password": "1234567890",
+      "uploadphoto": "rutvik.png",
+      "role": "buyer",
+      "id": "f7bd"
+    },
+    {
+      "id": "23f5",
+      "aboutYou": "g",
+      "age": "fg",
+      "agreetc": true,
+      "dob": "2024-01-12",
+      "email": "rutvik12@gmail.com",
+      "gender": "Female",
+      "address": {
+        "id": 0,
+        "addLine1": "gf",
+        "addLine2": "f",
+        "city": "g",
+        "state": "...",
+        "zipCode": "g"
+      },
+      "language": [
+        "English"
+      ],
+      "name": "fg",
+      "password": "123456789",
+      "uploadphoto": "C:\\fakepath\\login.JPG",
+      "role": "seller"
+    },
+    {
+      "id": "271e",
+      "aboutYou": "ssdasd",
+      "age": "23",
+      "agreetc": true,
+      "dob": "3232-03-21",
+      "email": "rutvik1245@gmail.com",
+      "gender": "Male",
+      "address": {
+        "id": 0,
+        "addLine1": "sddas",
+        "addLine2": "asdasd",
+        "city": "asdasd",
+        "state": "...",
+        "zipCode": "dasd"
+      },
+      "language": [
+        "Gujrati"
+      ],
+      "name": "erwre",
+      "password": "2321311321",
+      "uploadphoto": "C:\\fakepath\\6.JPG",
+      "role": "seller"
+    },
+    {
+      "id": "de80",
+      "aboutYou": "asd",
+      "age": "123",
+      "agreetc": true,
+      "dob": "2123-02-23",
+      "email": "rutvik1234@gmail.com",
+      "gender": "Male",
+      "address": {
+        "id": 0,
+        "addLine1": "sdas",
+        "addLine2": "sad",
+        "city": "da",
+        "state": "...",
+        "zipCode": "asd"
+      },
+      "language": [
+        "English"
+      ],
+      "name": "sdsd",
+      "password": "123456789asda",
+      "uploadphoto": "C:\\fakepath\\login.JPG",
+      "role": "buyer"
+    },
+    {
+      "id": "4e64",
+      "aboutYou": "dasdsadsd",
+      "age": "232",
+      "agreetc": true,
+      "dob": "2024-01-12",
+      "email": "rutvik1112@gmail.com",
+      "gender": "Male",
+      "address": {
+        "id": 0,
+        "addLine1": "qweqwe",
+        "addLine2": "wqeqwe",
+        "city": "qwewq",
+        "state": "...",
+        "zipCode": "223323"
+      },
+      "language": [
+        "Hindi"
+      ],
+      "name": "sads",
+      "password": "123456789",
+      "uploadphoto": "C:\\fakepath\\login.JPG",
+      "role": "seller"
+    },
+    {
+      "id": "0b55",
+      "aboutYou": "2e3ewqeq",
+      "age": "323",
+      "agreetc": true,
+      "dob": "2024-01-04",
+      "email": "rutvik12333@gmail.com",
+      "gender": "Male",
+      "address": {
+        "id": 0,
+        "addLine1": "eqwe",
+        "addLine2": "qweqewweq",
+        "city": "weq",
+        "state": "...",
+        "zipCode": "21313"
+      },
+      "language": [
+        "Gujrati"
+      ],
+      "name": "ddfsdf",
+      "password": "123456789",
+      "uploadphoto": "C:\\fakepath\\3.JPG",
+      "role": "seller"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "door",
+      "uploadphoto": "https://images.app.goo.gl/edZZ6rSyn8hCKdvi6",
+      "proctDesc": "door open and close",
+      "mrp": "1000",
+      "dp": "699",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "name": "window",
+      "uploadphoto": "https://images.app.goo.gl/edZZ6rSyn8hCKdvi6",
+      "proctDesc": "door open and close",
+      "mrp": "1000",
+      "dp": "699",
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "name": "glass",
+      "uploadphoto": "https://images.app.goo.gl/edZZ6rSyn8hCKdvi6",
+      "proctDesc": "door open and close",
+      "mrp": "1000",
+      "dp": "699",
+      "status": "active"
+    },
+    {
+      "id": 4,
+      "name": "chair",
+      "uploadphoto": "https://images.app.goo.gl/edZZ6rSyn8hCKdvi6",
+      "proctDesc": "door open and close",
+      "mrp": "1000",
+      "dp": "699",
+      "status": "active"
+    },
+    {
+      "id": 5,
+      "name": "furniture",
+      "uploadphoto": "https://images.app.goo.gl/edZZ6rSyn8hCKdvi6",
+      "proctDesc": "door open and close",
+      "mrp": "1000",
+      "dp": "699",
+      "status": "active"
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "userId": 3,
+      "sellerId": 2,
+      "product": {
+        "id": 1,
+        "name": "door",
+        "uploadphoto": "https://images.app.goo.gl/edZZ6rSyn8hCKdvi6",
+        "proctDesc": "door open and close",
+        "mrp": "1000",
+        "dp": "699",
+        "status": "active"
+      },
+      "deliveryAddress": {
+        "id": 0,
+        "address1": "cavendish pl",
+        "address2": "suwanee",
+        "city": "atlanta",
+        "state": "georgia",
+        "zipcode": "30024"
+      },
+      "contact": "1234567890",
+      "dateTime": "05/12/2020"
+    }
+  ]
+}

@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-6 offset-md-3" *ngIf="regForm">
                 <h3> Registration form</h3>
-                <form [formGroup]="signUpform">
+                <form [formGroup]="signUpForm" (ngSubmit) = "onSubmitSignUp()">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" class="form-control" formControlName="name">
@@ -33,12 +33,12 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label for="addLine1">Address 1</label>
-                            <input type="text" class="form-control" placeholder="suwanee, ga" formControlName="addline1">
+                            <input type="text" class="form-control" placeholder="suwanee, ga" formControlName="addLine1">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="addLine2">Address 2</label>
                             <input type="text" class="form-control" placeholder="apartment, floor"
-                                formControlName="addline2">
+                                formControlName="addLine2">
                         </div>
                     </div>
                     <div class="form-row">
@@ -55,7 +55,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label for="zip">Zip code</label>
-                            <input type="text" class="form-control" placeholder="City" formControlName="zipcode">
+                            <input type="text" class="form-control" placeholder="City" formControlName="zipCode">
                         </div>
                     </div>
                     <div class="form-group">
@@ -71,21 +71,27 @@
                     <div class="form-group">
                         <label for="gender">Gender</label>
                         <div class="form-check form-check-inline">
-                            <input type="radio" class="form-check-inline" formcontrolName="gender" value="Male">
-                            <label for="male" class="form-check-inline">Male</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input type="radio" class="form-check-inline" formcontrolName="gender" value="Female">
-                            <label for="female" class="form-check-inline">Female</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input type="radio" class="form-check-inline" formcontrolName="gender" value="Others" disabled>
-                            <label for="others" class="form-check-inline">Others</label>
-                        </div>
+                            <input class="form-check-inline" type="radio" formControlName="gender" name="gender" id="exampleRadios1" value="Male" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                              Male
+                            </label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-inline" type="radio" formControlName="gender" name="gender" id="exampleRadios1" value="Female" >
+                            <label class="form-check-label" for="exampleRadios1">
+                              Female
+                            </label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-inline" type="radio" formControlName="gender" name="gender" id="exampleRadios1" value="Other" >
+                            <label class="form-check-label" for="exampleRadios1">
+                              Others
+                            </label>
+                          </div>
                     </div>
                     <div class="form-group">
                         <label for="somethingAboutYou">Something About You</label>
-                        <textarea class="form-control" rows="3" formControlName="aboutyou"></textarea>
+                        <textarea class="form-control" rows="3" formControlName="aboutYou"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="uploadphoto">Upload Your Photo</label>
@@ -105,15 +111,17 @@
                     <div class="form-group">
                         <button class="btn btn-primary">Register</button>
                     </div>
+                    
                 </form>
+        
                 <p class="sim-pointer" routerLink="/sign-in">Already have an account</p>
             </div>
          <div class="col-md-6 offset-md-3" *ngIf="!regForm">
             <h3>Login - Angular 17 Template drivenb from with validation</h3>
-            <form name=""form #tf="ngForm" (ngSubmit)="tf.form.valid && onSubmitSignIn()" novalidate>
+            <form name=""form #tf="ngForm" (ngSubmit)= onSubmitSignIn() novalidate>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" name="userEmail"
+                    <input type="email" class="form-control"  name="userEmail"
                   [(ngModel)]="signInFormValue.userEmail" #userEmail="ngModel" required email />
                 </div>
                 <div class="form-froup">

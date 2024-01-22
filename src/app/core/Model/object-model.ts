@@ -20,7 +20,7 @@ export class Address{
     addLine2!: string;
     city!: string;
     state!: string;
-    Zipcode!:number;
+    zipCode!:number;
 }
 
 export class Product{

@@ -7,7 +7,7 @@ import { ApiService } from '../../core/service/api.service';
   providedIn: 'root'
 })
 export class LoginSignupService {
-
+  public api_user_url = "/user";
   public login_url = "http://localhost:3000";
   public reg_url = "http://localhost:3000";
 
@@ -25,6 +25,6 @@ adminLogin(user_name:any, password:any):Observable<any>{
 }
 
 userRegister(user_dto:any):Observable<any>{
-  return this.apiService.post(this.reg_url+'/user', user_dto)
+  return this.apiService.post(this.api_user_url, user_dto)
 }
 }
