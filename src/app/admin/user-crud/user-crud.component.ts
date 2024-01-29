@@ -104,7 +104,7 @@ export class UserCrudComponent implements OnInit{
     }
     this.adminService.addUser(this.user_dto).subscribe(data=>{
        this.getAllUser();
-       JQuery('#addEdituserModel').modal('toggle');
+       JQuery('#addEditUserModel').modal('toggle');
     }, error =>{
       console.log("error",error);
       
@@ -120,18 +120,18 @@ export class UserCrudComponent implements OnInit{
         this.upload_file_name=this.single_user_data.uploadphoto;
         this.addEditUserForm.setValue({
           name:this.single_user_data.name,
-          mobNumber:this.single_user_data.mobNumber,
+          mobNumber: '32323232',
           age:this.single_user_data.age,
           dob:this.single_user_data.dob,
           email:this.single_user_data.email,
           password:this.single_user_data.password,
           language:this.single_user_data.language,
           gender:this.single_user_data.gender,
-          addLine1:this.single_user_data.addLine1,
-          addLine2:this.single_user_data.addLine2,
-          city:this.single_user_data.city,
-          state:this.single_user_data.state,
-          zipCode:this.single_user_data.zipCode,
+          addLine1:this.single_user_data.address.addLine1,
+          addLine2:this.single_user_data.address.addLine2,
+          city:this.single_user_data.address.city,
+          state:this.single_user_data.address.state,
+          zipCode:this.single_user_data.address.zipCode,
           aboutYou:this.single_user_data.aboutYou,
           uploadphoto:'',
           agreetc:this.single_user_data.agreetc,
@@ -172,7 +172,7 @@ export class UserCrudComponent implements OnInit{
     }
     this.adminService.editUser(this.edit_user_id,this.user_dto).subscribe(data=>{
        this.getAllUser();
-       JQuery('#addEdituserModel').modal('toggle');
+       JQuery('#addEditUserModel').modal('toggle');
     },error =>{
       console.log("error",error);
       
