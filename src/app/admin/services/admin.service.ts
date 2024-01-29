@@ -8,7 +8,7 @@ import { ApiService } from '../../core/service/api.service';
 export class AdminService {
 public user_url = "http://localhost:3000/user/";
 public product_url= "http://localhost:3000/products/";
-public all_user= "http://localhost:3000/orders/";
+public all_order= "http://localhost:3000/orders/";
 
   constructor(private apiService:ApiService) { }
 
@@ -19,7 +19,7 @@ public all_user= "http://localhost:3000/orders/";
   return this.apiService.get(this.product_url);
   }
   allUser():Observable<any>{
-  return this.apiService.get(this.all_user)
+  return this.apiService.get(this.user_url)
   }
   addUser(user_dto:any){
   return this.apiService.post(this.user_url, user_dto);

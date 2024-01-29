@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AdminService } from '../services/admin.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-admin-dashboard',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './admin-dashboard.component.html',
   styleUrl: './admin-dashboard.component.css'
 })
@@ -25,8 +26,8 @@ export class AdminDashboardComponent implements OnInit {
   constructor(private router: Router, private adminService: AdminService) { }
 
   ngOnInit(): void {
-
-
+    this.adminProductDashboard();
+    this.adminUserDashboardData();
   }
   userDashboard() {
     this.router.navigateByUrl("/admin/user");
@@ -37,6 +38,7 @@ export class AdminDashboardComponent implements OnInit {
   adminUserDashboardData() {
     this.adminService.userDashboardData().subscribe(data => {
       this.user_dashboard_data = data;
+      console.log("user_dashboard_data",this.user_dashboard_data );
       for (let user in this.user_dashboard_data) {
         if (this.user_dashboard_data[user].role == 'admin') {
           ++this.admin_user;
@@ -53,7 +55,24 @@ export class AdminDashboardComponent implements OnInit {
     })
   }
 
-  adminProductDashboard(){
-    this.adminService.productDashboardData
+  adminProductDashboard() {
+    this.adminService.productDashboardData().subscribe(data => {
+      this.product_dashboard_data = data;
+      console.log("product_dashboard_data",this.product_dashboard_data);
+      for (let status in this.product_dashboard_data) {
+        if (this.product_dashboard_data[status].status == 'publish') {
+          ++this.publish_product;
+        } else if (this.product_dashboard_data[status].status == 'inactive') {
+          ++this.publish_product;
+        } else if (this.product_dashboard_data[status].status == 'draft') {
+          ++this.publish_product;
+        }
+        ++this.total_product;
+      }
+    }, error => {
+      console.log("error", error);
+
+
+    })
   }
 }
