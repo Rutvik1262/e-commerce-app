@@ -26,7 +26,7 @@ public all_order= "http://localhost:3000/orders/";
   }
   //get data of individual user
   singleUser(user_id:any){
-  return this.apiService.get(this.user_url+ user_id)
+  return this.apiService.get(this.user_url + user_id)
   }
   //update data for one user
    editUser(user_id:any, user_dto:any):Observable<any>{

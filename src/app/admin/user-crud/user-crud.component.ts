@@ -78,7 +78,7 @@ export class UserCrudComponent implements OnInit{
       return;
     }
     console.log("addEditUser",this.addEditUser);
-    
+
     this.user_reg_data = this.addEditUserForm.value;
     this.user_dto = {
       aboutYou: this.user_reg_data.aboutYou,
@@ -103,11 +103,12 @@ export class UserCrudComponent implements OnInit{
       role: this.user_reg_data.role,
     }
     this.adminService.addUser(this.user_dto).subscribe(data=>{
+      this.addEditUserForm.reset();
        this.getAllUser();
-       JQuery('#addEditUserModel').modal('toggle');
+       $('#addEditUserModel').modal('toggle');
     }, error =>{
       console.log("error",error);
-      
+
     })
     }
     editUserPopup(user_id:any){
@@ -120,7 +121,7 @@ export class UserCrudComponent implements OnInit{
         this.upload_file_name=this.single_user_data.uploadphoto;
         this.addEditUserForm.setValue({
           name:this.single_user_data.name,
-          mobNumber: '32323232',
+          mobNumber:this.single_user_data.mobNumber,
           age:this.single_user_data.age,
           dob:this.single_user_data.dob,
           email:this.single_user_data.email,
@@ -171,18 +172,19 @@ export class UserCrudComponent implements OnInit{
       role: this.user_reg_data.role,
     }
     this.adminService.editUser(this.edit_user_id,this.user_dto).subscribe(data=>{
+      this.addEditUserForm.reset();
        this.getAllUser();
-       JQuery('#addEditUserModel').modal('toggle');
+       $('#addEditUserModel').modal('toggle');
     },error =>{
       console.log("error",error);
-      
+
     })
   }
   deleteUser(user_id:any){
     this.adminService.deleteUser(user_id).subscribe(data=>{
       this.getAllUser();
     },error =>{
-      console.log("error",error); 
+      console.log("error",error);
     })
   }
 }
