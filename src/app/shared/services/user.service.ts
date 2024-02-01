@@ -10,7 +10,7 @@ export class UserService {
 public user_url= "http://localhost:3000/user/";
 
   constructor(private http:HttpClient, private apiService:ApiService) { }
-
+ 
   getUserData(user_id:any){
     return this.apiService.get(this.user_url+user_id);
   }

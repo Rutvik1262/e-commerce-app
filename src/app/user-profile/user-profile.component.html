@@ -1,1 +1,112 @@
-<p>user-profile works!</p>
+<br>
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <form [formGroup]="userProfileForm" (ngSubmit)="updateProfile()" >
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" formControlName="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="mobNumber">Mobile Number</label>
+                        <input type="text" class="form-control" formControlName="mobNumber">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Enter your age</label>
+                        <input type="text" class="form-control" formControlName="age">
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Enter your DOB</label>
+                        <input type="date" class="form-control" formControlName="dob">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" placeholder="rutvik@gmail.com"
+                                formControlName="email">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" placeholder="password"
+                                formControlName="password">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="addLine1">Address 1</label>
+                            <input type="text" class="form-control" placeholder="suwanee, ga" formControlName="addLine1">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="addLine2">Address 2</label>
+                            <input type="text" class="form-control" placeholder="apartment, floor"
+                                formControlName="addLine2">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" placeholder="City" formControlName="city">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="state">State</label>
+                            <select id="inputstate" class="form-control" formControlName="state">
+                                <option selected>choose..</option>
+                                <option>Gujrat</option>
+                                <option>Delhi</option>
+                                <option>MP</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="zip">Zip code</label>
+                            <input type="text" class="form-control" placeholder="City" formControlName="zipCode">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="language">Language</label>
+                        <select multiple class="form-control" formControlName="language">
+                            <option>Hindi</option>
+                            <option>English</option>
+                            <option>Gujrati</option>
+                            <option>Tamil</option>
+                            <option>Others</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-inline" type="radio" formControlName="gender" name="gender" id="exampleRadios1" value="Male" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                              Male
+                            </label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-inline" type="radio" formControlName="gender" name="gender" id="exampleRadios1" value="Female" >
+                            <label class="form-check-label" for="exampleRadios1">
+                              Female
+                            </label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-inline" type="radio" formControlName="gender" name="gender" id="exampleRadios1" value="Other" >
+                            <label class="form-check-label" for="exampleRadios1">
+                              Others
+                            </label>
+                          </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="somethingAboutYou">Something About You</label>
+                        <textarea class="form-control" rows="3" formControlName="aboutYou"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="uploadphoto">Upload Your Profile Photo</label>
+                        <input type="file" class="form-control" formControlName="uploadphoto">
+                    </div>
+                  
+                    <div class="form-group">
+                        <button class="btn btn-primary">Update Your Profile</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

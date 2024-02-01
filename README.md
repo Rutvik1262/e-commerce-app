@@ -32,3 +32,5 @@ part 21: https://www.youtube.com/watch?v=83OFnEZIOlE&ab_channel=TestyCodeiz
 part 22: https://www.youtube.com/watch?v=vnoRJAOGVDI&ab_channel=TestyCodeiz
 part 23: https://www.youtube.com/watch?v=i6ByRir61Ao&ab_channel=TestyCodeiz
 part 24: https://www.youtube.com/watch?v=bvwxaZLDfNA&ab_channel=TestyCodeiz
+part 25: https://www.youtube.com/watch?v=8FsvaqQL77w&t=532s&ab_channel=TestyCodeiz
+part 26: https://www.youtube.com/watch?v=CubtehFOktE&list=RDCMUCyjNY_GgJydoikYPv4U953A&index=6&ab_channel=TestyCodeiz

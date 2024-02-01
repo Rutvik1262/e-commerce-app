@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { AdminService } from '../services/admin.service';
 import { User } from '../../core/Model/object-model';
 
-declare var JQuery:any;
+declare var $:any;
 @Component({
   selector: 'app-user-crud',
   standalone: true,
@@ -30,12 +30,12 @@ export class UserCrudComponent implements OnInit{
   constructor(private formBuilder: FormBuilder, private adminService: AdminService, private router: Router ) { }
   ngOnInit(): void {
      this.getAllUser();
-     console.log('All User Data.....:', this.all_user_data);
+     console.log('All User Data.....:', this.getAllUser());
     this.addEditUserForm = this.formBuilder.group({
       name: ['', Validators.required],
       mobNumber: ['', Validators.required],
       age: ['', Validators.required],
-      dob: ['', Validators.required],
+      dob: [Validators.required],
       email: ['', Validators.required],
       password: ['', Validators.required],
       addLine1: ['', Validators.required],

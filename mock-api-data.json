@@ -1,29 +1,27 @@
 {
   "user": [
     {
-      "aboutYou": "adasdadasdad",
-      "age": "21",
-      "agreetc": "true",
-      "dob": "06-12-2000",
+      "aboutYou": "dad",
+      "age": "22",
+      "agreetc": true,
+      "dob": "2024-01-10",
       "email": "admin@gmail.com",
       "gender": "Male",
       "address": {
         "id": 0,
-        "address1": "cavendish pl",
-        "address2": "suwanee",
-        "city": "atlanta",
-        "state": "georgia",
-        "zipcode": "30024"
+        "addLine1": "ga",
+        "addLine2": "sa",
+        "city": "sa",
+        "state": "Delhi",
+        "zipCode": "34324"
       },
       "language": [
-        "english",
-        "hindi",
-        "gujrati"
+        "Tamil"
       ],
-      "mobNumber": "9876543210",
-      "name": "Rutvik",
+      "mobNumber": "22222222222",
+      "name": "roy",
       "password": "123456789",
-      "uploadphoto": "rutvik.png",
+      "uploadphoto": "C:\\fakepath\\fourth_section.JPG",
       "role": "admin",
       "id": "6797"
     },
@@ -32,7 +30,7 @@
       "aboutYou": "ssdasd",
       "age": "23",
       "agreetc": true,
-      "dob": "3232-03-21",
+      "dob": "2023-03-21",
       "email": "seller1@gmail.com",
       "gender": "Male",
       "address": {
@@ -52,28 +50,29 @@
       "role": "seller"
     },
     {
-      "id": "de80",
-      "aboutYou": "asd",
-      "age": "123",
+      "aboutYou": "dad",
+      "age": "22",
       "agreetc": true,
-      "dob": "2123-02-23",
+      "dob": "2024-01-04",
       "email": "buyer1@gmail.com",
       "gender": "Male",
       "address": {
         "id": 0,
-        "addLine1": "sdas",
-        "addLine2": "sad",
-        "city": "da",
-        "state": "...",
-        "zipCode": "asd"
+        "addLine1": "ga",
+        "addLine2": "sa",
+        "city": "sa",
+        "state": "Delhi",
+        "zipCode": "34324"
       },
       "language": [
-        "English"
+        "Tamil"
       ],
-      "name": "sdsd",
+      "mobNumber": "22222222222",
+      "name": "hari",
       "password": "123456789",
-      "uploadphoto": "C:\\fakepath\\login.JPG",
-      "role": "buyer"
+      "uploadphoto": "C:\\fakepath\\3.JPG",
+      "role": "buyer",
+      "id": "de80"
     },
     {
       "id": "0b55",
