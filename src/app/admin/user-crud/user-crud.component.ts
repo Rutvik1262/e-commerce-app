@@ -105,10 +105,11 @@ export class UserCrudComponent implements OnInit{
     this.adminService.addUser(this.user_dto).subscribe(data=>{
       this.addEditUserForm.reset();
        this.getAllUser();
+       console.log("this.getAllUser",this.getAllUser);
+       
        $('#addEditUserModel').modal('toggle');
     }, error =>{
       console.log("error",error);
-
     })
     }
     editUserPopup(user_id:any){

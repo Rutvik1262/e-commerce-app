@@ -121,13 +121,63 @@
       "password": "123456789",
       "uploadphoto": "C:\\fakepath\\3.JPG",
       "role": "buyer"
+    },
+    {
+      "id": "9ddf",
+      "aboutYou": "aweweq",
+      "age": "22",
+      "agreetc": true,
+      "dob": "2024-02-01",
+      "email": "admin2@gmail.com",
+      "gender": "Male",
+      "address": {
+        "id": 0,
+        "addLine1": "sdasd",
+        "addLine2": "sadd",
+        "city": "asdda",
+        "state": "Gujrat",
+        "zipCode": "33333"
+      },
+      "language": [
+        "Gujrati"
+      ],
+      "mobNumber": "2222222222",
+      "name": "herry",
+      "password": "123456789",
+      "uploadphoto": "C:\\fakepath\\3.JPG",
+      "role": "admin"
+    },
+    {
+      "id": "f7d8",
+      "aboutYou": "sdasd",
+      "age": "11",
+      "agreetc": true,
+      "dob": "2024-02-02",
+      "email": "admin@gmail.com",
+      "gender": "Male",
+      "address": {
+        "id": 0,
+        "addLine1": "dfsdfsdf",
+        "addLine2": "dsfs",
+        "city": "dfsd",
+        "state": "Gujrat",
+        "zipCode": "30024"
+      },
+      "language": [
+        "English"
+      ],
+      "mobNumber": "1111111111",
+      "name": "sda",
+      "password": "123456789",
+      "uploadphoto": "C:\\fakepath\\3.JPG",
+      "role": "admin"
     }
   ],
   "products": [
     {
       "id": 1,
       "name": "door",
-      "uploadphoto": "https://images.app.goo.gl/edZZ6rSyn8hCKdvi6",
+      "uploadphoto": "https://images.app.goo.gl/CX9C8QZ9JwLPdF9u6",
       "proctDesc": "door open and close",
       "mrp": "10000",
       "dp": "699",
